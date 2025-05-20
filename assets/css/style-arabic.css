@@ -1,0 +1,57 @@
+
+.about-content-arabic{
+  padding-left: 0px;
+  padding-right: 150px;
+}
+.abt-astr-ar {
+  right: 100px;
+}
+
+.letstalk-content-arabic {
+  left: auto;
+}
+.abt-astr2-ar{
+	right: auto;
+	left: 150px;
+}
+
+/* about page */
+.page-about-in-cont-ar{
+	background-position: left !important;
+}
+
+.team-block-three .info-box-ar {
+	padding-right: 50px;
+	padding-left: 20px;
+}
+
+.team-block-three .info-box-ar::before {
+  position: absolute;
+  left: -40px;
+  right: -27px;
+  border-radius: 14px 0 0 14px;
+}
+
+.timeline-cntnt-ar {
+  display: flex;
+	align-items: self-start;
+	position: relative;
+  padding-right: 60px !important;
+  border-right: 2px dashed #d1d1d1 !important;
+}
+
+.step-icon-ar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  right: -11px;
+  top: 0;
+  z-index: 2;
+  border: 3px solid #f5f5f5;
+}
