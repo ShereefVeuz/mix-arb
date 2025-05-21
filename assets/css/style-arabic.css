@@ -20,9 +20,9 @@
   right: 100px;
 }
 
-.letstalk-content-arabic {
+/* .letstalk-content-arabic {
   left: auto;
-}
+} */
 .abt-astr2-ar{
 	right: auto;
 	left: 150px;
@@ -77,4 +77,9 @@
 .message-qoutes-ar {
   right: auto;
   left: 30px;
+}
+
+.left-serv-inner-items-ar {
+  margin-right: 0;
+  margin-left: 15px;
 }

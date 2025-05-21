@@ -78,8 +78,18 @@
                                         <li><a class="dropdown-item" href="team-mix.html">The MIX Team </a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"> أعمالنا </a>
+                                <li class="nav-item dropdown">
+                                    <div class="d-flex align-items-center nav-link-wrapper">
+                                        <a class="nav-link" href="service-listing.html">  أعمالنا  </a>
+                                        <a class="nav-link dropdown-toggle px-1" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="visually-hidden">Toggle dropdown</span>
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu dropdown-menu-item-out" aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="conferences-forums.html">Conference & Forums</a></li>
+                                        <li><a class="dropdown-item" href="exhibitions-concept-design.html">Exhibitions & Concept design</a></li>
+                                        <li><a class="dropdown-item" href="entertainment-events.html">Entertainment & Events</a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">أخبارنا  </a>
@@ -560,33 +570,6 @@
         AOS.init();
     </script>
 
-    <!-- <script>
-        // portfolio
-        document.querySelectorAll('.portfolio-items').forEach(item => {
-        const content = item.querySelector('.portfolio-items-cont');
-
-        item.addEventListener('mouseenter', () => {
-            gsap.killTweensOf(content);
-            gsap.to(content, {
-            y: -30,
-            opacity: 1,
-            duration: 0.7,
-            ease: "power3.out"
-            });
-        });
-
-        item.addEventListener('mouseleave', () => {
-            gsap.killTweensOf(content);
-            
-            gsap.to(content, {
-            y: 0,
-            opacity: 0,
-            duration: 0.4,
-            ease: "power3.in"
-            });
-        });
-        });
-    </script> -->
 </body>
 
 </html>
