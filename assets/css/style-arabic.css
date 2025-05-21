@@ -72,3 +72,9 @@
 .partners-item-out {
   direction: ltr !important;
 }
+
+/* ceo message */
+.message-qoutes-ar {
+  right: auto;
+  left: 30px;
+}
