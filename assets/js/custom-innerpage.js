@@ -185,7 +185,7 @@ function openMenu() {
   // Slide in menu from right
   gsap.to(menuOverlay, {
     duration: 0.5,
-    right: '0%',
+    left: '0%',
     ease: 'power3.out'
   });
 
@@ -219,7 +219,7 @@ function closeMenu() {
   // Slide out menu to the right
   gsap.to(menuOverlay, {
     duration: 0.5,
-    right: isMobileView() ? '-100%' : '-50%',
+    left: isMobileView() ? '-100%' : '-50%',
     delay: 0.3,
     ease: 'power3.in'
   });
@@ -262,6 +262,31 @@ dropdownToggles.forEach(toggle => {
 //// END dropdown menu
 
 
+// portfolio
+document.querySelectorAll('.portfolio-items').forEach(item => {
+  const content = item.querySelector('.portfolio-items-cont');
+
+  item.addEventListener('mouseenter', () => {
+    gsap.killTweensOf(content);
+    gsap.to(content, {
+      y: -30,
+      opacity: 1,
+      duration: 0.7,
+      ease: "power3.out"
+    });
+  });
+
+  item.addEventListener('mouseleave', () => {
+    gsap.killTweensOf(content);
+    
+    gsap.to(content, {
+      y: 0,
+      opacity: 0,
+      duration: 0.4,
+      ease: "power3.in"
+    });
+  });
+});
 
 
 // why mix 
@@ -380,63 +405,64 @@ tl.from(".inner-banner img", { scale: 1.2, duration: 10 })
 
 
 // partners about
-// $(document).ready(function(){ 
-//         let owl2 = $(".partners-item-out");
-//         owl2.owlCarousel({
-//         loop: true,
-//         margin: 40,
-//         nav: false,
-//         autoplay: true,
-//         autoplayTimeout: 2000,
-//         autoplayHoverPause: true,
-//         center: true, 
-//         stagePadding: 0, 
-//         responsive: {
-//             0: { 
-//                 items: 1
-//             },
-//             400: { 
-//                 items: 2
-//             },
-//             700: { 
-//                 items: 3
-//             },
-//             1000: { 
-//                 items: 5
-//             }
-//         }
-//     });
-//     });
+$(document).ready(function(){ 
+        let owl2 = $(".partners-item-out");
+        owl2.owlCarousel({
+        loop: true,
+        margin: 40,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        center: true, 
+        rtl: false,
+        stagePadding: 0, 
+        responsive: {
+            0: { 
+                items: 1
+            },
+            400: { 
+                items: 2
+            },
+            700: { 
+                items: 3
+            },
+            1000: { 
+                items: 5
+            }
+        }
+    });
+});
 
 // partners about
-// $(document).ready(function(){ 
-//         let owl2 = $(".partners-item-out2");
-//         owl2.owlCarousel({
-//         loop: true,
-//         margin: 40,
-//         nav: false,
-//         autoplay: true,
-//         autoplayTimeout: 2000,
-//         autoplayHoverPause: true,
-//         center: true, 
-//         rtl: true,
-//         stagePadding: 0, 
-//         responsive: {
-//             0: { 
-//                 items: 1
-//             },
-//             400: { 
-//                 items: 2
-//             },
-//             700: { 
-//                 items: 3
-//             },
-//             1000: { 
-//                 items: 5
-//             }
-//         }
-//     });
-//     });
+$(document).ready(function(){ 
+        let owl2 = $(".partners-item-out2");
+        owl2.owlCarousel({
+        loop: true,
+        margin: 40,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        center: true, 
+        rtl: true,
+        stagePadding: 0, 
+        responsive: {
+            0: { 
+                items: 1
+            },
+            400: { 
+                items: 2
+            },
+            700: { 
+                items: 3
+            },
+            1000: { 
+                items: 5
+            }
+        }
+    });
+    });
 
 
 // teams about

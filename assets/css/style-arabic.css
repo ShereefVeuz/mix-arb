@@ -1,3 +1,16 @@
+/* mob menu */
+.main-header .menu-dropdown.open .dropdown-menu{
+  text-align: initial !important;
+}
+.main-header .dropdown-menu{
+  padding-left: 5px !important;
+  padding-right: 20px !important;
+}
+
+.menu-button {
+  right: auto;
+  left: 0;
+}
 
 .about-content-arabic{
   padding-left: 0px;
@@ -54,4 +67,8 @@
   top: 0;
   z-index: 2;
   border: 3px solid #f5f5f5;
+}
+
+.partners-item-out {
+  direction: ltr !important;
 }
