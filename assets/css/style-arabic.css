@@ -16,9 +16,26 @@
   padding-left: 0px;
   padding-right: 150px;
 }
+/* .abt-astr-ar {
+  position: absolute;
+	top: 100px;
+	right: 100px;
+	width: 250px;
+	z-index: 1;
+} */
+
 .abt-astr-ar {
+  position: absolute;
+  top: 100px;
   right: 100px;
+  width: 250px;
+  z-index: 1;
 }
+.abt-astr-img-wrap {
+  width: 100%;
+  height: 100%;
+}
+
 
 /* .letstalk-content-arabic {
   left: auto;

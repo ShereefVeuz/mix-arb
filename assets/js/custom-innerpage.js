@@ -494,3 +494,34 @@ gsap.from(".inner-serv-cont .serv-inner-items-out", {
         toggleActions: "play none none reverse",
     },
 });
+
+
+
+
+
+
+
+
+// astraunet
+gsap.registerPlugin(ScrollTrigger);
+
+// Scroll horizontal movement on the wrapper
+gsap.to(".abt-astr-ar", {
+  x: 200,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".abt-astr-ar",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true,
+  }
+});
+
+// Floating animation on the image only
+gsap.to(".abt-astr-img-wrap img", {
+  y: -20,
+  duration: 2,
+  repeat: -1,
+  yoyo: true,
+  ease: "sine.inOut"
+});
