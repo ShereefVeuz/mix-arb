@@ -100,3 +100,21 @@
   margin-right: 0;
   margin-left: 15px;
 }
+
+
+/* portfolio */
+.portf-popup-cont ul li::before {
+  content: "→";
+  position: absolute;
+  top: 0;
+  left: auto;
+  color: #5f6364;
+  font-size: 1em;
+  right: -25px;
+  rotate: 180deg;
+}
+
+.offcanvas-header{
+  left: 30px;
+  right: auto;
+}
