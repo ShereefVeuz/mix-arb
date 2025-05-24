@@ -118,3 +118,70 @@
   left: 30px;
   right: auto;
 }
+
+/* career page */
+.job-info-ar{
+  margin-left: 0px !important;
+  margin-right: 25px;
+}
+
+.career-page_openings .job_time-ar img,
+.career-page_openings .job_location-ar img {
+  margin-right: 0px !important;
+  margin-left: 10px;
+}
+
+
+/* news at mix */
+.blog-listing-items-out-ar{
+  padding-right: 0px !important;
+  padding-left: 30px;
+}
+.blog-listing-items-auth-ar{
+  padding: 5px !important;
+}
+
+.left-related-article-ar span {
+  margin-right: 0px !important;
+  margin-left: 3px;
+}
+
+.left-contact-phone-ar h4 span,
+.left-contact-mail-ar h4 span{
+  margin-right: 0px !important;
+  margin-left: 10px;
+}
+
+.left-contact-mail-ar p .mail-icon {
+  margin-right: 0px !important; 
+  margin-left: 10px;
+}
+
+.contact-check-ar .form-check {
+  padding-left: 0 !important;
+  padding-right: 0em;
+}
+
+.contact-check-ar .form-check .form-check-input {
+  float: right !important;
+  margin-left: 10px !important;
+  margin-left: -1.5em;
+}
+
+
+/* clients */
+.testimonial-card h5::before {
+  margin-left: 0px;
+  margin-right: -30px;
+}
+
+
+
+
+
+
+
+
+
+
+

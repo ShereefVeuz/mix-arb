@@ -185,7 +185,7 @@ function openMenu() {
   // Slide in menu from right
   gsap.to(menuOverlay, {
     duration: 0.5,
-    left: '0%',
+    right: '0%',
     ease: 'power3.out'
   });
 
@@ -219,7 +219,7 @@ function closeMenu() {
   // Slide out menu to the right
   gsap.to(menuOverlay, {
     duration: 0.5,
-    left: isMobileView() ? '-100%' : '-50%',
+    right: isMobileView() ? '-100%' : '-50%',
     delay: 0.3,
     ease: 'power3.in'
   });
@@ -505,8 +505,7 @@ $(document).ready(function() {
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
     center: true,
-    ltr: true,
-    rtl: false,
+    rtl: true,
     stagePadding: 0,
     loop: true,
     responsive: {
@@ -518,49 +517,49 @@ $(document).ready(function() {
     }
   });
 
-  $(".portf-page-item-out2").owlCarousel({
-    margin: 20,
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    center: true,
-    rtl: true,
-    stagePadding: 0,
-    loop: true,
-    responsive: {
-      0: { items: 1 },
-      400: { items: 2 },
-      700: { items: 3 },
-      1000: { items: 3 }
-    }
-  });
+  // $(".portf-page-item-out2").owlCarousel({
+  //   margin: 20,
+  //   nav: false,
+  //   autoplay: true,
+  //   autoplayTimeout: 2000,
+  //   autoplayHoverPause: true,
+  //   center: true,
+  //   rtl: true,
+  //   stagePadding: 0,
+  //   loop: true,
+  //   responsive: {
+  //     0: { items: 1 },
+  //     400: { items: 2 },
+  //     700: { items: 3 },
+  //     1000: { items: 3 }
+  //   }
+  // });
 });
 
 
 // filter profilePage
-const filterContainer = document.querySelector(".pf-category-filter"),
- galleryItems = document.querySelectorAll(".pf-category-item");
+// const filterContainer = document.querySelector(".pf-category-filter"),
+//  galleryItems = document.querySelectorAll(".pf-category-item");
 
- filterContainer.addEventListener("click", (event) =>{
-   if(event.target.classList.contains("filter-item")){
-   	 // deactivate existing active 'filter-item'
-   	 filterContainer.querySelector(".active").classList.remove("active");
-   	 // activate new 'filter-item'
-   	 event.target.classList.add("active");
-   	 const filterValue = event.target.getAttribute("data-filter");
-   	 galleryItems.forEach((item) =>{
-       if(item.classList.contains(filterValue) || filterValue === 'all'){
-       	item.classList.remove("hide");
-       	 item.classList.add("show");
-       }
-       else{
-       	item.classList.remove("show");
-       	item.classList.add("hide");
-       }
-   	 });
-   }
- });
+//  filterContainer.addEventListener("click", (event) =>{
+//    if(event.target.classList.contains("filter-item")){
+//    	 // deactivate existing active 'filter-item'
+//    	 filterContainer.querySelector(".active").classList.remove("active");
+//    	 // activate new 'filter-item'
+//    	 event.target.classList.add("active");
+//    	 const filterValue = event.target.getAttribute("data-filter");
+//    	 galleryItems.forEach((item) =>{
+//        if(item.classList.contains(filterValue) || filterValue === 'all'){
+//        	item.classList.remove("hide");
+//        	 item.classList.add("show");
+//        }
+//        else{
+//        	item.classList.remove("show");
+//        	item.classList.add("hide");
+//        }
+//    	 });
+//    }
+//  });
 
 
  // portfolio banner
@@ -600,3 +599,129 @@ disableLenisSections.forEach((section) => {
     setTimeout(() => lenis.start(), 100);
   }, { passive: false });
 });
+
+
+
+gsap.from(".left-page-career-in", {
+  duration: 1,
+  x: -100,
+  opacity: 0,
+  stagger: 0.3,
+  scrollTrigger: {
+      trigger: ".left-page-career-in",
+      start: "top 90%",
+      end: "bottom 50%",
+      scrub: true,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+  }
+});
+gsap.from(".right-page-career-in-out", {
+  duration: 1,
+  x: 100,
+  opacity: 0,
+  stagger: 0.3,
+  scrollTrigger: {
+      trigger: ".right-page-career-in-out",
+      start: "top 90%",
+      end: "bottom 50%",
+      scrub: true,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+  }
+});
+
+
+// // last career page reveal text
+// document.addEventListener("DOMContentLoaded", function () {
+//   const paragraph2 = document.getElementById("splitText");
+//   const words2 = paragraph2.innerHTML.split(" "); // Split by words
+//   paragraph2.innerHTML = words2.map(word => `<span class="word2">${word}</span>`).join(" ");
+
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   gsap.from(".word2", {
+//     opacity: 0.3,
+//     y: 20,
+//     stagger: 0.1, // Adds delay between each word
+//     duration: 0.5,
+//     scrollTrigger: {
+//       trigger: "#textSection",
+//       start: "center center",
+//       end: "+=150%",
+//       scrub: true,
+//       pin: true
+//     }
+//   });
+// });
+
+
+// testimonials
+// gsap.from(".testim-in", {
+//   duration: 1,
+//   x: 300,
+//   opacity: 0,
+//   stagger: 0.3,
+//   scrollTrigger: {
+//     trigger: ".testim-in",
+//     start: "top 80%",
+//     end: "top 20%",
+//     scrub: true,
+//     markers: false,
+//     toggleActions: "play none none reverse",
+//   },
+// });
+
+$('.testimonial-carousel').owlCarousel({
+  loop: true,
+  margin: 30,
+  nav: false,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  rtl: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    992: {
+      items: 2
+    },
+    1000: {
+      items: 3
+    }
+  }
+});
+
+
+
+// filter profilePage
+const filterContainer = document.querySelector(".pf-category-filter"),
+  galleryItems = document.querySelectorAll(".pf-category-item");
+
+filterContainer.addEventListener("click", (event) => {
+  if (event.target.classList.contains("filter-item")) {
+    // deactivate existing active 'filter-item'
+    filterContainer.querySelector(".active").classList.remove("active");
+    // activate new 'filter-item'
+    event.target.classList.add("active");
+    const filterValue = event.target.getAttribute("data-filter");
+    galleryItems.forEach((item) => {
+      if (item.classList.contains(filterValue) || filterValue === 'all') {
+        item.classList.remove("hide");
+        item.classList.add("show");
+      } else {
+        item.classList.remove("show");
+        item.classList.add("hide");
+      }
+    });
+  }
+});
+
+
+
+// clients banner

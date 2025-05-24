@@ -595,6 +595,37 @@ gsap.set(['.floating-logos-m', '.floating-logos-i', '.floating-logos-x'], {
 });
 
 
+gsap.to('.floating-element-232', {
+  scrollTrigger: {
+    trigger: '.about-cntnt-main',
+    start: 'top 50%',   // animation starts when section enters the viewport
+    end: 'bottom top',     // animation ends when section scrolls out
+    scrub: true,
+    markers: false
+  },
+  x: window.innerWidth + 300,    // move right
+  y: window.innerHeight + 200,   // move down
+  ease: 'none'
+});
+
+
+gsap.to('.floating-element-222', {
+  scrollTrigger: {
+    trigger: '.what-we-do-section',
+    start: 'top top',
+    end: 'bottom center',
+    scrub: 1,
+    markers: false
+  },
+  x: -window.innerWidth  + 300, // Move left (negative value)
+  y: window.innerHeight + 200, // Move down, // Counter-clockwise rotation
+  ease: 'none',
+  duration: 3
+});
+
+
+
+
 // floating text
 document.addEventListener('DOMContentLoaded', function () {
   const floatingLogo = document.querySelector('.floating-logo');
