@@ -358,6 +358,16 @@
 		padding-right: 15px !important;
 	}
 
+	/* contact page */
+	.cnt-page-main-heading {
+		font-size: 50px;
+		line-height: 60px;
+	}
+	.cnt-page-sub-heading {
+		font-size: 15px;
+		line-height: 25px;
+	}
+
 
 }
 
@@ -600,6 +610,15 @@
 	}
 	.social-links-footer ul li a {
   		padding: 13px 14px;
+	}
+
+	/* contact page */
+	.cnt-page-main-heading {
+		font-size: 35px;
+		line-height: 40px;
+	}
+	.cnt-page-sub-heading {
+		font-size: 14px;
 	}
 	
 

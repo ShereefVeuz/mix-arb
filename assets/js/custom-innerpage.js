@@ -464,6 +464,22 @@ $(document).ready(function(){
     });
     });
 
+// ceo-message
+gsap.from(".ceo-message-in", {
+  duration: 1,
+  x: 300,
+  opacity: 0,
+  stagger: 0.3,
+  scrollTrigger: {
+      trigger: ".ceo-message-in",
+      start: "top 80%",
+      end: "top 20%",
+      scrub: true,
+      markers: false,
+      toggleActions: "play none none reverse",
+  },
+});
+
 
 // teams about
 gsap.from(".team-block-three", {
@@ -477,6 +493,36 @@ gsap.from(".team-block-three", {
         start: "top 60%",
         toggleActions: "play none none reverse",
     }
+});
+
+// new at mis
+gsap.from(".related-blogs", {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".right-blog-in",
+        start: "top 60%",
+        toggleActions: "play none none reverse",
+    }
+});
+
+// career openings
+gsap.from(".career_openings_all", {
+    duration: 300,
+    x: 100,
+    opacity: 0,
+    stagger: 50,
+    scrollTrigger: {
+        trigger: ".career_openings_all",
+        start: "top 80%",
+        end: "center 30%",
+        scrub: true,
+        markers: false,
+        toggleActions: "play reverse play reverse",
+    },
 });
 
 // service page
@@ -493,6 +539,36 @@ gsap.from(".inner-serv-cont .serv-inner-items-out", {
         markers: false,
         toggleActions: "play none none reverse",
     },
+});
+
+// contact
+gsap.from(".left-contact", {
+  duration: 1,
+  x: -100,
+  opacity: 0,
+  stagger: 0.3,
+  scrollTrigger: {
+      trigger: ".left-contact",
+      start: "top 90%",
+      end: "bottom 50%",
+      scrub: true,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+  }
+});
+gsap.from(".right-contact", {
+  duration: 1,
+  x: 100,
+  opacity: 0,
+  stagger: 0.3,
+  scrollTrigger: {
+      trigger: ".right-contact",
+      start: "top 90%",
+      end: "bottom 50%",
+      scrub: true,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+  }
 });
 
 
@@ -725,3 +801,67 @@ filterContainer.addEventListener("click", (event) => {
 
 
 // clients banner
+
+
+// validation
+document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form submission
+
+    // Collect form fields
+    const name = document.getElementById('name');
+    const email = document.getElementById('mail');
+    const phone = document.getElementById('phone');
+    const organization = document.getElementById('org');
+    const subject = document.getElementById('subject');
+    const message = document.querySelector('textarea');
+    const terms = document.getElementById('termsCheck');
+
+    // Validation flag
+    let valid = true;
+    let errorMsg = "";
+
+    // Name validation
+    if (name.value.trim() === '') {
+      valid = false;
+      errorMsg += "Full name is required.\n";
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value.trim())) {
+      valid = false;
+      errorMsg += "Please enter a valid email address.\n";
+    }
+
+    // Optional: phone number check (basic)
+    if (phone.value && !/^\d{10,15}$/.test(phone.value.trim())) {
+      valid = false;
+      errorMsg += "Enter a valid phone number (10–15 digits).\n";
+    }
+
+    // Subject check
+    if (subject && subject.value.trim() === '') {
+      valid = false;
+      errorMsg += "Subject is required.\n";
+    }
+
+    // Message check
+    if (message.value.trim() === '') {
+      valid = false;
+      errorMsg += "Message cannot be empty.\n";
+    }
+
+    // Terms check
+    if (!terms.checked) {
+      valid = false;
+      errorMsg += "You must accept the Terms & Conditions.\n";
+    }
+
+    if (valid) {
+      alert("Form submitted successfully! ✅");
+      this.submit(); // Submit form or handle via AJAX
+    } else {
+      alert(errorMsg);
+    }
+  });
+
