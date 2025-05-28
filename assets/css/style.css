@@ -1061,7 +1061,7 @@ body.loading {
 }
 
 .portfolio-items-cont h2{
-	font-size: 35px;
+	font-size: 25px;
 	font-weight: 500;
 }
 
@@ -1527,9 +1527,9 @@ body.loading {
 
 
 .floating-logo .floating-logos-m{
-	width: 50px;  /* adjust based on your logo size */
-	height: 50px; /* adjust based on your logo size */
-	background-image: url('../img/mix-m.png'); /* add your logo image */
+	width: 25px;  /* adjust based on your logo size */
+	height: 25px; /* adjust based on your logo size */
+	background-image: url('../img/m1.png'); /* add your logo image */
 	background-size: contain;
 	opacity: .4;
 	filter: blur(1px);
@@ -1537,9 +1537,9 @@ body.loading {
 }
 
 .floating-logo .floating-logos-i{
-	width: 15px;  /* adjust based on your logo size */
-	height: 50px; /* adjust based on your logo size */
-	background-image: url('../img/mix-i.png'); /* add your logo image */
+	width: 25px;  /* adjust based on your logo size */
+	height: 25px; /* adjust based on your logo size */
+	background-image: url('../img/x12.png'); /* add your logo image */
 	background-size: contain;
 	opacity: .4;
 	filter: blur(1px);
@@ -1549,8 +1549,8 @@ body.loading {
 
 .floating-logo .floating-logos-x{
 	width: 32px;  /* adjust based on your logo size */
-	height: 50px; /* adjust based on your logo size */
-	background-image: url('../img/mix-x.png'); /* add your logo image */
+	height: 25px; /* adjust based on your logo size */
+	background-image: url('../img/x1.png'); /* add your logo image */
 	background-size: contain;
 	opacity: .4;
 	filter: blur(1px);
@@ -1569,18 +1569,29 @@ body.loading {
 	height: 100vh;
 	overflow: hidden;
 }
-.inner-banner:before{
+/* .inner-banner:before{
 	content: "";
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-color: #000000b2;
-}
+} */
 
 .inner-banner-img {
 	width: 100%;
 	height: 100%;
 }
+.inner-banner-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 5, 26, 0.63);
+  z-index: 1;
+}
+
 .inner-banner-img img {
 	width: 100%;
 	height: 100%;
@@ -1603,18 +1614,17 @@ body.loading {
 	font-weight: 700;
 	color: #fff;
 	margin-bottom: 15px;
-	background: linear-gradient(to right, #F00992 0%, #00AEEE 60%);
+	/* background: linear-gradient(to right, #F00992 0%, #00AEEE 60%);
     background-clip: border-box;
 	background-clip: border-box;
 	background-clip: border-box;
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent; */
 }
 
-.inner-banner span {
-	font-weight: 400;
-	font-size: 14px;
-	color: #fff;
+.inner-banner-cnt .inner-banner-el {
+	color: #eb008c;
+	display: block;
 }
 
 .inner-banner-cnt-small {
@@ -1658,7 +1668,7 @@ body.loading {
 .page-about-out {
 	padding: 80px 0 0;
 	position: relative;
-	background-image: url(../img/inner-banner-2.jpg);
+	background-image: url(../img/what-we-do-1.png);
 	width: 100%;
 	height: 100%;
 	background-size: cover;
@@ -1684,13 +1694,13 @@ body.loading {
 	padding-right: 30px;
 }
 
-.page-about-in-cont{
+/* .page-about-in-cont{
 	background-image: url(../img/about03.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 	min-height: 500px;
-}
+} */
 
 .page-about-content .section-title h2 {
 	font-size: 60px;
@@ -2024,7 +2034,7 @@ body.loading {
 
 /* partners */
 .team-mix-banner{
-	height: 50vh;
+	height: 80vh;
 }
 
 /* ceo message */
@@ -2125,6 +2135,8 @@ body.loading {
 	/* animation: zoomInOut 8s ease-in-out infinite; */
 	position: relative;
 	overflow: hidden;
+	background-blend-mode: overlay;
+  	background-color: #080120de;
   }
   .team-block-three {
 	position: relative;
@@ -2339,7 +2351,7 @@ body.loading {
 -------------------------------------*/
 .portf-banner-out{
 	padding: 200px 0px 0;
-	background-image: url(../img/service-bg.png);
+	background-image: url(../img/bg-04.jpg);
 	background-repeat: no-repeat;
 	width: 100%;
 	background-size: cover;
@@ -2347,6 +2359,8 @@ body.loading {
 	position: relative;
 	position: relative;
 	height: 100vh;
+	background-blend-mode: overlay;
+  	background-color: rgba(0, 5, 26, 0.63);
 }
 
 .portf-page-item-out2{
@@ -2369,16 +2383,24 @@ body.loading {
 	line-height: 80px;
 	font-weight: 700;
 	color: #fff;
-	margin-bottom: 15px;
-	background: linear-gradient(to right, #F00992 0%, #00AEEE 60%);
+	text-align: center;
+	/* background: linear-gradient(to right, #F00992 0%, #00AEEE 60%);
     background-clip: border-box;
 	background-clip: border-box;
 	background-clip: border-box;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	text-align: center;
+	text-align: center; */
 	  margin-bottom: 30px;
+
 }
+
+
+.portf-page-content-out .portf-page-content-head h2 .inner-banner-el{
+	color: #eb008c;
+  	display: block;
+}
+
 
 /*.gallery*/
 .pf-category{
@@ -2895,7 +2917,7 @@ body.loading {
 
 .career-popup-out .offcanvas-header {
     position: absolute;
-    right: 30px;
+    left: 30px; /* arabic */
     top: 30px;
     color: white;
     z-index: 9;
@@ -2928,6 +2950,33 @@ body.loading {
   
 .career-popup-out .d-text-none{
     display: block;
+}
+
+.career-talent{
+	padding: 80px 0 0;
+}
+.career-talent-cont{
+	padding: 80px 60px;
+	border-radius: 30px;
+	box-shadow: rgb(19, 18, 18) 0px 4px 12px;
+	position: relative;
+	z-index: 2;
+	width: 80%;
+	margin: 0 auto;
+	background: linear-gradient(to right, #F0099273 0%, #00AEEE6E 80%);
+}
+.career-talent-cont h3{
+	font-size: 35px;
+	font-weight: 600;
+	text-align: center;
+}
+.career-talent-cont h3 span{
+	display: block;
+}
+.career-talent-cont h3 a{
+	font-size: 18px;
+	font-weight: 500;
+	color: white;
 }
 /* END form popup */
 
@@ -3201,13 +3250,14 @@ body.loading {
 	font-size: 80px;
 	font-weight: 700;
 	line-height: 110px;
-	background: linear-gradient(to right, #F00992 0%, #00AEEE 60%);
+	/* background: linear-gradient(to right, #F00992 0%, #00AEEE 60%);
     background-clip: border-box;
 	background-clip: border-box;
 	background-clip: border-box;
 	background-clip: border-box;
 	-webkit-background-clip: text;
-	color: transparent;
+	color: transparent; */
+	color: white;
 	margin-bottom: 20px;
 }
 
@@ -3579,19 +3629,22 @@ body.loading {
     min-block-size: 100svb;
     padding-block: 80px;
     overflow-x: clip;
-	background-image: url(../img/what-we-do-1.png);
+	background-image: url(../img/bg-04.jpg);
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	padding: 100px 0;
 	position: relative;
+	background-blend-mode: overlay;
+  	background-color: rgba(3, 11, 45, 0.91);
   }
 
   .section-wrapper {
     display: grid;
     place-items: center;
     position: relative;
+	z-index: 2;
   }
 
   .header {
@@ -3611,6 +3664,7 @@ body.loading {
   .headline {
     font-size: 35px !important;
 	font-weight: 600 !important;
+	text-align: center;
   }
 
   @media (width >= 1200px) {
